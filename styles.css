@@ -97,7 +97,7 @@ body {
 
 .shape-back {
     position: absolute;
-    width: 150%; /* Sobresale para crear el efecto artístico */
+    width: 100%; /* Sobresale para crear el efecto artístico */
     z-index: 1;
     opacity: 0.6;
     filter: brightness(1.2); /* Resalta la mancha */
@@ -107,7 +107,7 @@ body {
 .photo-front {
     position: relative;
     width: 150%;
-    height: 150%;
+    height: 140%;
     z-index: 2;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
@@ -241,8 +241,8 @@ body {
 
 /*-----Foto debajo del contador-----*/
 .secondary-photo-container {
-    width: 100%;
-    max-width: 400px; /* Un poco más ancha que la circular */
+    width: 90%;
+    max-width: 350px; /* Un poco más ancha que la circular */
     margin: 30px auto;
     padding: 10px;
     background-color: var(--blanco-puro);
@@ -418,6 +418,29 @@ body {
     opacity: 0.9;
 }
 
+.collage-cointainer {
+    padding: 20px 0; /* Espaciado mínimo para que sea lo primero que se vea */
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collage-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio pequeño antes del texto */
+    margin-top: -80px;
+}
+
+.collage2 {
+    width: 450px; /* Tamaño protagonista pero equilibrado */
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    /* Eliminamos position: absolute para que ocupe su propio espacio central */
+}
 /* --- SECCIÓN MENSAJE FINAL --- */
 .final-message-section {
     padding: 60px 20px;
