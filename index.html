@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday XV</title>
+    <title>Mis 15 Años - Lucía Victoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="main-container">
-        <h1 class="main-title">Happy birthday XV</h1>
-
-        <div class="photo-container">
-            <img src="ads/img/foto.png" alt="Foto Quinceañera" class="profile-photo">
+        <h1 class="main-title">Happy Birthday XV</h1>
+        
+        <div class="photo-wrapper">
+            <img src="ads/img/mancha-azul.png" alt="" class="shape-back">
+            <img src="ads/img/foto.png" alt="Quinceañera" class="photo-front">
         </div>
+        
+        <div>   </div>
 
         <div class="calendar-card">
             <div class="calendar-header">Enero</div>
@@ -21,17 +25,22 @@
 
         <p class="event-details">Faltan solo:</p>
         
-        <div id="countdown">
-            <div class="time-unit"><span id="days">00</span>Días</div>
-            <div class="time-unit"><span id="hours">00</span>Hs</div>
-            <div class="time-unit"><span id="minutes">00</span>Min</div>
-            <div class="time-unit"><span id="seconds">00</span>Seg</div>
+        <div id="countdown" class="countdown-container">
+            <div class="time-unit"><span id="days">00</span><p>Días</p></div>
+            <div class="time-unit"><span id="hours">00</span><p>Hs</p></div>
+            <div class="time-unit"><span id="minutes">00</span><p>Min</p></div>
+            <div class="time-unit"><span id="seconds">00</span><p>Seg</p></div>
         </div>
 
         <div class="actions">
-            <a href="https://wa.me/tu-numero" class="btn-confirmar">Confirmar Asistencia</a>
+            <a href="https://wa.me/5491100000000?text=Hola!%20Confirmo%20mi%20asistencia" 
+               id="btn-whatsapp" 
+               class="btn-confirmar">
+               Confirmar Asistencia
+            </a>
         </div>
     </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
