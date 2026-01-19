@@ -500,4 +500,20 @@ body {
         right: 0%; /* Lo pegamos bien a la derecha */
         width: 90px;  /* Más pequeño */
     }
+
+
+    .message-container {
+        padding: 30px 15px;
+        border-radius: 30px;
+        max-width: 90%; /* Evita que pegue a los bordes laterales */
+    }
+
+    .invitation-text {
+        font-size: 1.2rem;
+    }
+
+    .decorative-element-wrapper {
+        width: 220px;
+        height: 220px;
+    }
 }
