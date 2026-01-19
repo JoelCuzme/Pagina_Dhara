@@ -247,7 +247,7 @@ body {
     padding: 10px;
     background-color: var(--blanco-puro);
     border-radius: 15px; /* Bordes redondeados suaves */
-    box-shadow: 0 10px 25px rgba(26, 42, 108, 0.1); /* Sombra azulada muy sutil */
+    box-shadow: 0 10px 25px rgba(0.6, 0.6, 0.6, 0.6); /* Sombra azulada muy sutil */
 }
 
 .photo-landscape {
@@ -432,7 +432,8 @@ body {
 .message-container {
     max-width: 500px;
     width: 100%; /* Ocupa el ancho disponible en móvil */
-    margin-bottom: 20px;
+    margin-top: -60px ;
+    margin-bottom: 60px;
     padding: 30px 20px; /* Espacio interno para el texto */
     border: 4px solid #160458; /* Borde rosa suave como la referencia */
     border-radius: 40px; /* Bordes muy redondeados elegantes */
@@ -445,7 +446,7 @@ body {
     font-weight: 300;
     font-size: 2rem;
     line-height: 1.8;
-    color: #f1eb92;
+    color: #ffffff;
     text-align: center;
     margin: 0;
 }
@@ -468,32 +469,5 @@ body {
     width: 75%;
     height: auto;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
-}
-
-/* Estilos base para todos los globos */
-.balloon {
-    position: absolute;
-    z-index: 10;
-    pointer-events: none; /* Los globos no bloquean los clics */
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
-}
-
-/* --- POSICIONAMIENTO PARA PC / TABLET --- */
-.top-left-corner {
-    position: absolute;
-    top: 25%;   /* Ajusta la altura a tu gusto */
-    left: 27%;    /* Usamos porcentaje para que sea relativo al ancho */
-    width: 150px; 
-    transform: rotate(-15deg);
-    z-index: 10;
-}
-
-.top-right-corner {
-    position: absolute;
-    top: 20%;   /* Ajusta la altura a tu gusto */
-    right: 27%;   /* Usamos porcentaje */
-    width: 150px;
-    transform: rotate(15deg);
-    z-index: 10;
 }
 
