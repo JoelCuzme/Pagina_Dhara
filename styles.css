@@ -94,29 +94,71 @@ body {
 }
 
 /* --- CALENDARIO --- */
-.calendar-card {
-    border: 2px solid var(--azul-profundo);
-    border-radius: 12px;
-    width: 120px;
-    overflow: hidden;
-    /* Aumentamos el primer valor (arriba) y mantenemos el segundo (abajo) */
-    margin: 60px auto 30px auto; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Un toque extra de elegancia */
-}
-.calendar-header {
-    background-color: var(--azul-claro);
-    color: white;
-    padding: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.calendar-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'serif'; /* Para un look similar a la imagen */
 }
 
-.calendar-day {
+.calendar-month {
+    font-family: 'Great Vibes', cursive; /* Usamos la tipografía elegante que ya tenemos */
+    color: #d4a5a5; /* Rosa suave de tus imágenes */
     font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.day-name {
     font-weight: bold;
-    padding: 10px;
-    color: var(--azul-profundo);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.calendar-grid span {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+}
+
+/* El estilo para resaltar el día 31 */
+.special-day {
+    position: relative;
+    font-weight: bold;
+    color: #000;
+}
+
+.special-day::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #c94d4d; /* Círculo rosa */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Opcional: Agregar un pequeño corazón sobre el día como en la imagen */
+.special-day::before {
+    content: '❤';
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 0.9rem;  
+    color: #d4a5a5;
 }
 
 /* --- CONTADOR --- */
@@ -233,7 +275,7 @@ body {
 .section-title-cursive {
     position: relative;
     z-index: 2;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Brush Script';
     font-size: 2.5rem;
     color: #3344da; /* Un tono rosa viejo como el de la imagen */
     margin-top: -10px;
@@ -251,7 +293,7 @@ body {
 }
 
 .location-photo {
-    width: 100%;
+    width: 80%;
     border-radius: 5px;
     position: relative;
     z-index: 3;
@@ -265,23 +307,25 @@ body {
     transform: translate(-50%, -50%);
     width: 130%;
     height: 130%;
-    background-color: #0c0b0b; /* Rosa muy suave */
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Forma orgánica */
+    background-color: #1d2a9c; /* Rosa muy suave */
+    border-radius: 80% 60% 70% 40% / 60% 50% 60% 60%; /* Forma orgánica */
     z-index: 0;
-    opacity: 1;
+    opacity: 0.55;
 }
 
 .venue-name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Brush Script';
     font-weight: 300;
     font-size: 1.8rem;
-    color: #888;
-    margin: 10px 0 5px;
+    color: #000000;
+    margin: 100px 0 5px;
 }
 
 .venue-time {
+    font-family: 'Brush Script';
+
     font-size: 1.2rem;
-    color: #aaa;
+    color: #0a0707;
     margin-bottom: 25px;
 }
 
@@ -337,4 +381,56 @@ body {
     font-size: 1.5rem;
     color: #555;
     transform: rotate(-5deg);
+}
+
+
+
+/* --- SECCIÓN MENSAJE FINAL --- */
+.final-message-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco-puro);
+}
+
+.message-container {
+    max-width: 550px;
+    margin-bottom: 0px;
+}
+
+.invitation-text {
+    font-family: 'Brush Script';
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+.decorative-element-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob-pink-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4d2f7e; /* Rosa suave de la imagen */
+    border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; /* Forma orgánica irregular */
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.decorative-img {
+    position: relative;
+    z-index: 2;
+    width: 70%; /* Ajusta según el tamaño de tu imagen */
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
