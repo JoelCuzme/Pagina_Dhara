@@ -407,37 +407,51 @@ body {
 /* Estilos base para todos los globos */
 .balloon {
     position: absolute;
-    width: 120px; /* Tamaño más grande para que se parezcan a las bolas disco */
-    height: auto;
-    z-index: 10; /* Asegura que estén por encima de la mayoría de los elementos */
-    opacity: 0.9; /* Ligeramente opacos */
-    pointer-events: none; /* No interfieren con los clics */
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2)); /* Pequeña sombra para dar volumen */
+    z-index: 10;
+    pointer-events: none; /* Los globos no bloquean los clics */
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
 }
 
-/* Posiciones específicas para los globos en las esquinas superiores */
+/* --- POSICIONAMIENTO PARA PC / TABLET --- */
 .top-left-corner {
-    top: 500px; /* Sube el globo para que solo se vea una parte */
-    left: 300px; /* Mueve a la izquierda para que solo se vea una parte */
-    transform: rotate(-20deg); /* Ligeramente inclinado */
-    width: 250px; /* Un poco más grande si quieres */
+    top: -20px;
+    left: -40px;
+    width: 180px; /* Tamaño grande en PC */
+    transform: rotate(-15deg);
 }
 
 .top-right-corner {
-    top: 900px; /* Sube el globo */
-    right: 300px; /* Mueve a la derecha */
-    transform: rotate(15deg); /* Ligeramente inclinado en la otra dirección */
-    width: 180px; /* Otro tamaño para variar */
+    top: -20px;
+    right: -40px;
+    width: 180px;
+    transform: rotate(15deg);
 }
 
-/* Si quieres un tercer globo al medio, como la referencia sugiere un central arriba,
-   podrías añadir esto en HTML y CSS:
-   HTML: <img src="ads/img/globo-dorado.png" alt="Globo central" class="balloon top-center-balloon">
-   CSS:
-   .top-center-balloon {
-       top: 10px; // Altura específica
-       left: 50%; // Centrado horizontalmente
-       transform: translateX(-50%) rotate(5deg); // Centrar y rotar
-       width: 100px;
-   }
-*/
+/* --- AJUSTES ESPECÍFICOS PARA CELULAR (Pantallas menores a 600px) --- */
+@media (max-width: 600px) {
+    .top-left-corner {
+        width: 100px; /* Reducimos el tamaño en celular */
+        left: -20px;  /* Ajustamos la posición para que no tape el título */
+        top: -10px;
+    }
+
+    .top-right-corner {
+        width: 100px;
+        right: -20px;
+        top: -10px;
+    }
+
+    /* Ajuste de los títulos para que no se corten en pantallas pequeñas */
+    .main-title {
+        font-size: 2.8rem !important; /* Ajusta el tamaño del "Happy Birthday" */
+    }
+
+    .section-title-cursive {
+        font-size: 2rem !important;
+    }
+
+    /* Aseguramos que el contenedor principal use el 100% del ancho */
+    .main-container {
+        padding: 20px 10px;
+    }
+}
