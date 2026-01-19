@@ -414,16 +414,34 @@ body {
 
 /* --- POSICIONAMIENTO PARA PC / TABLET --- */
 .top-left-corner {
-    top: 600px;
-    left: 340px;
-    width: 180px; /* Tamaño grande en PC */
+    position: absolute;
+    top: 25%;   /* Ajusta la altura a tu gusto */
+    left: 27%;    /* Usamos porcentaje para que sea relativo al ancho */
+    width: 150px; 
     transform: rotate(-15deg);
+    z-index: 10;
 }
 
 .top-right-corner {
-    top: 900px;
-    right:350px;
-    width: 180px;
+    position: absolute;
+    top: 20%;   /* Ajusta la altura a tu gusto */
+    right: 27%;   /* Usamos porcentaje */
+    width: 150px;
     transform: rotate(15deg);
+    z-index: 10;
 }
 
+/* --- AJUSTES ESPECÍFICOS PARA CELULAR --- */
+@media (max-width: 600px) {
+    .top-left-corner {
+        top: 20%;    /* Más arriba en el celular */
+        left: 27%;  /* Lo pegamos bien a la izquierda (negativo para que sobresalga un poco) */
+        width: 80px;  /* Más pequeño para que no tape el texto "Happy Birthday" */
+    }
+
+    .top-right-corner {
+        top: 27%;
+        right: 27%; /* Lo pegamos bien a la derecha */
+        width: 80px;  /* Más pequeño */
+    }
+}
