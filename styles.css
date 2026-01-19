@@ -26,7 +26,15 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.event-details {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--azul-claro); /* Cambiado a blanco para que resalte sobre el fondo navy */
+    margin-bottom: 60px;
+    
+    text-shadow: 4px 4px 4px rgba(0,0,0,0.3);
 
+}
 .main-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
@@ -94,53 +102,50 @@ body {
 }
 
 /* --- CONTADOR --- */
-.countdown-frame {
+.seccion-contador-fondo {
     position: relative;
-    width: 100%;
-    max-width: 500px;
-    height: 150px; /* Ajustado para que sea más horizontal */
-    margin: 20px auto;
+    width: 120%;
+    min-height: 200px; /* Espacio vertical para que se luzca la foto */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 40px 0;
     overflow: hidden;
-    border-radius: 15px;
 }
 
-.bg-frame-photo {
+.foto-fondo-absoluta {
     position: absolute;
-    width: 120%;
-    height: 180%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la foto cubra todo sin estirarse */
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.5; /* Ajusta para que los números sean legibles */
 }
 
 .numeros-horizontales {
     position: relative;
-    z-index: 2;
-    display: flex; 
-    flex-direction: row; /* Asegura la horizontalidad */
+    z-index: 2; /* Por encima de la foto */
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    /* Un ligero sombreado al texto ayuda a que resalte sobre cualquier foto */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); 
 }
 
 .num-item span {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 4rem; /* Números grandes y elegantes */
     font-weight: 700;
     color: var(--azul-profundo);
-    /* Ancho fijo para que no se mueva el diseño al cambiar los números */
-    display: inline-block;
-    min-width: 65px; 
-    text-align: center;
 }
 
 .separador {
     font-size: 2.5rem;
-    font-weight: bold;
     color: var(--azul-profundo);
-    padding-bottom: 8px; /* Ajuste visual para alinear con el centro de los números */
+    font-weight: bold;
 }
 /* --- BOTÓN --- */
 .btn-confirmar {
