@@ -431,14 +431,14 @@ body {
 @media (max-width: 600px) {
     .top-left-corner {
         width: 100px; /* Reducimos el tamaño en celular */
-        left: -20px;  /* Ajustamos la posición para que no tape el título */
-        top: -10px;
+        left: 340px;  /* Ajustamos la posición para que no tape el título */
+        top: 600px;
     }
 
     .top-right-corner {
         width: 100px;
-        right: -20px;
-        top: -10px;
+        right: 350px;
+        top: 900px;
     }
 
     /* Ajuste de los títulos para que no se corten en pantallas pequeñas */
