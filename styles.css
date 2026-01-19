@@ -352,46 +352,102 @@ body {
     transform: rotate(-5deg);
 }
 
+/* --- SECCIÓN CÓDIGO DE VESTIMENTA --- */
+.dress-code-section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Evita scroll lateral por la bola disco */
+}
 
+.dress-code-title {
+    font-family: 'Playfair Display', serif;
+    color: #ff69b4; /* Rosa vibrante */
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.dress-code-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.dress-code-box {
+    background-color: #f8bbd0; /* Rosa pastel de fondo */
+    padding: 30px 20px;
+    border-radius: 25px;
+    margin: 0 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.tematica-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+.colores-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
 
 /* --- SECCIÓN MENSAJE FINAL --- */
 .final-message-section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--blanco-puro);
+    overflow: hidden; /* Evita desbordamientos en móvil */
 }
 
+/* --- ESTE ES EL MARGEN / RECUADRO --- */
 .message-container {
     max-width: 550px;
-    margin-bottom: 0px;
+    width: 100%; /* Ocupa el ancho disponible en móvil */
+    margin-bottom: 20px;
+    padding: 40px 25px; /* Espacio interno para el texto */
+    border: 4px solid #f8bbd0; /* Borde rosa suave como la referencia */
+    border-radius: 40px; /* Bordes muy redondeados elegantes */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo sutil */
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
 }
 
 .invitation-text {
-    font-family: 'Brush Script';
+    font-family: 'Brush Script'; /* Fuente cursiva suave */
     font-weight: 300;
-    font-size: 1.3rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1.8;
     color: #333;
     text-align: center;
+    margin: 0;
 }
 
 .decorative-element-wrapper {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 280px; /* Un poco más pequeño para móvil */
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px; /* Hace que el elemento decorativo suba un poco hacia el cuadro */
 }
 
 .blob-pink-bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #4d2f7e; /* Rosa suave de la imagen */
-    border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; /* Forma orgánica irregular */
+    background-color: #4d2f7e; /* Tu color morado/rosa oscuro */
+    border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; 
     z-index: 0;
     opacity: 0.8;
 }
@@ -399,7 +455,7 @@ body {
 .decorative-img {
     position: relative;
     z-index: 2;
-    width: 70%; /* Ajusta según el tamaño de tu imagen */
+    width: 75%;
     height: auto;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
@@ -435,13 +491,13 @@ body {
 @media (max-width: 600px) {
     .top-left-corner {
         top: 18%;    /* Más arriba en el celular */
-        left: -10%;  /* Lo pegamos bien a la izquierda (negativo para que sobresalga un poco) */
-        width: 80px;  /* Más pequeño para que no tape el texto "Happy Birthday" */
+        left: 0%;  /* Lo pegamos bien a la izquierda (negativo para que sobresalga un poco) */
+        width: 90px;  /* Más pequeño para que no tape el texto "Happy Birthday" */
     }
 
     .top-right-corner {
         top: 30%;
-        right: -10%; /* Lo pegamos bien a la derecha */
-        width: 80px;  /* Más pequeño */
+        right: 0%; /* Lo pegamos bien a la derecha */
+        width: 90px;  /* Más pequeño */
     }
 }
