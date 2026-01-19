@@ -414,15 +414,15 @@ body {
 
 /* --- POSICIONAMIENTO PARA PC / TABLET --- */
 .top-left-corner {
-    top: -20px;
-    left: -40px;
+    top: 600px;
+    left: 340px;
     width: 180px; /* Tamaño grande en PC */
     transform: rotate(-15deg);
 }
 
 .top-right-corner {
-    top: -20px;
-    right: -40px;
+    top: 900px;
+    right:350px;
     width: 180px;
     transform: rotate(15deg);
 }
