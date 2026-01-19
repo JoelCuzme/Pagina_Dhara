@@ -28,20 +28,20 @@ const renderCountdown = () => {
     const ahora = new Date().getTime();
     const tiempo = calcularDiferenciaTiempo(targetDate, ahora);
 
-    // Si la lógica de negocio nos dice que no hay más tiempo (null)
+    // Si la lógica de negocio dice que el tiempo expiró (null)
     if (!tiempo) {
-        document.querySelector('.event-details').innerText = "¡Hoy es el gran día!";
-        document.getElementById('countdown').style.display = 'none';
+        document.querySelector('.contador-titulo').innerText = "¡LLEGÓ EL DÍA!";
+        document.querySelector('.contador-box').style.display = 'none';
         return;
     }
 
-    // Si hay tiempo, actualizamos la interfaz
+    // Actualizamos los IDs que definimos en el nuevo HTML rosado
     document.getElementById('days').innerText = tiempo.dias.toString().padStart(2, '0');
     document.getElementById('hours').innerText = tiempo.horas.toString().padStart(2, '0');
     document.getElementById('minutes').innerText = tiempo.minutos.toString().padStart(2, '0');
     document.getElementById('seconds').innerText = tiempo.segundos.toString().padStart(2, '0');
 };
 
-// Intervalos
+// Mantenemos tus intervalos originales
 setInterval(renderCountdown, 1000);
 renderCountdown();

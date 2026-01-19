@@ -16,6 +16,8 @@ body {
     color: var(--azul-claro);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    position: relative;
+    overflow-x: hidden;
 }
 .main-title-container {
     position: relative;
@@ -161,73 +163,65 @@ body {
     color: #d4a5a5;
 }
 
-/* --- CONTADOR --- */
-.seccion-contador-fondo {
-    position: relative;
-    width: 120%;
-    min-height: 200px; /* Espacio vertical para que se luzca la foto */
+/* --- NUEVO ESTILO CONTADOR --- */
+.contador-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contador-titulo {
+    font-family: 'Playfair Display', serif;
+    color: #ff69b4; /* Rosado intenso como la imagen */
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contador-box {
+    background-color: #f8bbd0; /* Fondo rosado claro */
+    padding: 25px 15px;
+    border-radius: 20px; /* Bordes muy redondeados */
+    margin: 0 10px;
+}
+
+.numeros-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
-    overflow: hidden;
+    gap: 10px;
 }
 
-.foto-fondo-absoluta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que la foto cubra todo sin estirarse */
-    z-index: 1;
-    opacity: 0.5; /* Ajusta para que los números sean legibles */
-}
-
-.numeros-horizontales {
-    position: relative;
-    z-index: 2; /* Por encima de la foto */
+.time-block {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
-    /* Un ligero sombreado al texto ayuda a que resalte sobre cualquier foto */
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); 
 }
 
-.num-item span {
+.time-block span {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem; /* Números grandes y elegantes */
-    font-weight: 700;
-    color: var(--azul-profundo);
-}
-
-.separador {
-    font-size: 2.5rem;
-    color: var(--azul-profundo);
-    font-weight: bold;
-}
-/* --- BOTÓN --- */
-.btn-confirmar {
-    display: inline-block;
-    margin-top: 30px;
-    background-color: var(--azul-claro);
+    font-size: 3rem; /* Números grandes */
     color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
 }
 
-.btn-confirmar:hover {
-    transform: translateY(-3px);
-    background-color: var(--blanco-puro);
-    color: var(--azul-profundo);
+.label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: -5px;
+    letter-spacing: 1px;
 }
 
-/* Estilo para la nueva imagen debajo del contador */
+.separador-puntos {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: -20px; /* Alinea los puntos con los números */
+}
+
+/*-----Foto debajo del contador-----*/
 .secondary-photo-container {
     width: 100%;
     max-width: 400px; /* Un poco más ancha que la circular */
@@ -249,96 +243,71 @@ body {
 
 /* --- SECCIÓN UBICACIÓN --- */
 .location-section {
-    margin: 60px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.title-with-banner {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-bg {
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-.section-title-cursive {
-    position: relative;
-    z-index: 2;
-    font-family: 'Brush Script';
-    font-size: 2.5rem;
-    color: #3344da; /* Un tono rosa viejo como el de la imagen */
-    margin-top: -10px;
-}
-
-.location-card {
+    padding: 50px 20px;
     text-align: center;
-    margin-top: 20px;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.location-photo-wrapper {
+.location-frame {
+    border: 5px solid #f8bbd0; /* Rosa suave */
+    border-radius: 30px;
+    padding: 30px 20px;
+    max-width: 450px;
+    margin: 0 auto 40px;
     position: relative;
-    width: 280px;
-    margin: 0 auto 20px;
 }
 
-.location-photo {
-    width: 80%;
-    border-radius: 5px;
-    position: relative;
-    z-index: 3;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.blob-bg {
+/* Simulación del lazo o moño (opcional si tienes la imagen) */
+.location-frame::before {
+     /* Puedes usar un SVG o imagen aquí */
     position: absolute;
-    top: 50%;
+    top: -20px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 130%;
-    height: 130%;
-    background-color: #1d2a9c; /* Rosa muy suave */
-    border-radius: 80% 60% 70% 40% / 60% 50% 60% 60%; /* Forma orgánica */
-    z-index: 0;
-    opacity: 0.55;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.event-title-main {
+    font-family: 'Great Vibes', cursive;
+    color: #d81b60;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
 }
 
 .venue-name {
-    font-family: 'Brush Script';
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.event-time, .event-address {
+    color: #666;
     font-weight: 300;
-    font-size: 1.8rem;
-    color: #000000;
-    margin: 100px 0 5px;
 }
 
-.venue-time {
-    font-family: 'Brush Script';
-
-    font-size: 1.2rem;
-    color: #0a0707;
-    margin-bottom: 25px;
-}
-
+/* --- BOTÓN VER UBICACIÓN --- */
 .btn-location {
     display: inline-block;
-    padding: 12px 35px;
-    background-color: #ccc;
-    color: black;
+    margin-top: 20px;
+    padding: 12px 40px;
+    background-color: #fce4ec; /* Rosa muy claro */
+    color: #d81b60;
     text-decoration: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    border-bottom: 2px solid #999;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid #f8bbd0;
+    transition: all 0.3s ease;
 }
+
+.btn-location:hover {
+    background-color: #f8bbd0;
+    transform: scale(1.05);
+}
+
+
 
 /* --- SECCIÓN CARRETE DE PELÍCULA --- */
 .film-strip-section {
@@ -434,3 +403,41 @@ body {
     height: auto;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
+
+/* Estilos base para todos los globos */
+.balloon {
+    position: absolute;
+    width: 120px; /* Tamaño más grande para que se parezcan a las bolas disco */
+    height: auto;
+    z-index: 10; /* Asegura que estén por encima de la mayoría de los elementos */
+    opacity: 0.9; /* Ligeramente opacos */
+    pointer-events: none; /* No interfieren con los clics */
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2)); /* Pequeña sombra para dar volumen */
+}
+
+/* Posiciones específicas para los globos en las esquinas superiores */
+.top-left-corner {
+    top: 500px; /* Sube el globo para que solo se vea una parte */
+    left: 300px; /* Mueve a la izquierda para que solo se vea una parte */
+    transform: rotate(-20deg); /* Ligeramente inclinado */
+    width: 250px; /* Un poco más grande si quieres */
+}
+
+.top-right-corner {
+    top: 900px; /* Sube el globo */
+    right: 300px; /* Mueve a la derecha */
+    transform: rotate(15deg); /* Ligeramente inclinado en la otra dirección */
+    width: 180px; /* Otro tamaño para variar */
+}
+
+/* Si quieres un tercer globo al medio, como la referencia sugiere un central arriba,
+   podrías añadir esto en HTML y CSS:
+   HTML: <img src="ads/img/globo-dorado.png" alt="Globo central" class="balloon top-center-balloon">
+   CSS:
+   .top-center-balloon {
+       top: 10px; // Altura específica
+       left: 50%; // Centrado horizontalmente
+       transform: translateX(-50%) rotate(5deg); // Centrar y rotar
+       width: 100px;
+   }
+*/
