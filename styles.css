@@ -427,31 +427,3 @@ body {
     transform: rotate(15deg);
 }
 
-/* --- AJUSTES ESPECÍFICOS PARA CELULAR (Pantallas menores a 600px) --- */
-@media (max-width: 600px) {
-    .top-left-corner {
-        width: 100px; /* Reducimos el tamaño en celular */
-        left: 340px;  /* Ajustamos la posición para que no tape el título */
-        top: 600px;
-    }
-
-    .top-right-corner {
-        width: 100px;
-        right: 350px;
-        top: 900px;
-    }
-
-    /* Ajuste de los títulos para que no se corten en pantallas pequeñas */
-    .main-title {
-        font-size: 2.8rem !important; /* Ajusta el tamaño del "Happy Birthday" */
-    }
-
-    .section-title-cursive {
-        font-size: 2rem !important;
-    }
-
-    /* Aseguramos que el contenedor principal use el 100% del ancho */
-    .main-container {
-        padding: 20px 10px;
-    }
-}
