@@ -19,50 +19,67 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-.main-title-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
-}
-
-.title-bg {
-    position: absolute;
-    width: 230%; /* Ajusta según el tamaño de tu imagen */
-    max-width: 800px;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* 3. Mejora de la tipografía del título */
-.main-title {
-    position: relative;
-    z-index: 2; /* Para que quede sobre la imagen */
-    font-family: 'Brush Script'; /* Tipografía más elegante y festiva */
-    font-size: 2.5rem; /* Aumentamos el tamaño porque las cursivas suelen verse más pequeñas */
-    color: var(--azul-profundo);
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
-}
-.main-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 40px 20px;
+/* --- ENCABEZADO CENTRAL DHARA ALENA --- */
+.main-header-container {
+    padding: 20px 0; /* Espaciado mínimo para que sea lo primero que se vea */
+    text-align: center;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.event-details {
+
+.butterfly-hero-area {
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio pequeño antes del texto */
+}
+
+.butterfly-main {
+    width: 300px; /* Tamaño protagonista pero equilibrado */
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    /* Eliminamos position: absolute para que ocupe su propio espacio central */
+}
+
+.script-text {
+    font-family: 'Brush Script', cursive; 
+    font-size: 1.6rem;
+    color: #888;
+    display: block;
+}
+
+.event-owner-name {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
-    color: var(--azul-claro); /* Cambiado a blanco para que resalte sobre el fondo navy */
-    margin-bottom: 60px;
-    
-    text-shadow: 4px 4px 4px rgba(0,0,0,0.3);
-
+    color: #4a90e2; 
+    margin: 5px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
+
+.event-date-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+.main-profile-photo {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
 
 /* --- ESTILO DE LA FOTO CON MANCHA --- */
 .photo-wrapper {
@@ -86,12 +103,10 @@ body {
 
 .photo-front {
     position: relative;
-    width: 70%;
-    height: 70%;
+    width: 150%;
+    height: 150%;
     z-index: 2;
-    border-radius: 50%; 
     object-fit: cover;
-    border: 6px solid var(--blanco-puro); 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
@@ -442,15 +457,7 @@ body {
     margin-top: 20px; /* Hace que el elemento decorativo suba un poco hacia el cuadro */
 }
 
-.blob-pink-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #4d2f7e; /* Tu color morado/rosa oscuro */
-    border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; 
-    z-index: 0;
-    opacity: 0.8;
-}
+
 
 .decorative-img {
     position: relative;
